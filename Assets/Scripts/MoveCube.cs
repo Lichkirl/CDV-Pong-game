@@ -26,11 +26,11 @@ public class MoveCube : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(upKey))
+        if (Input.GetKey(upKey) && transform.position.y < 5)
         {
             rb.velocity = Vector2.up * speed;
         }
-        else if(Input.GetKey(downKey))
+        else if(Input.GetKey(downKey) && transform.position.y > -5)
         {
             rb.velocity = Vector2.down * speed;
         }
